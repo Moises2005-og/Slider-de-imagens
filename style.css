@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: red;
+    text-shadow: 1px 2px 3px #000;
+}
+
+.slider {
+    width: 600px;
+    height: 400px;
+    margin-left: 27%;
+    margin-top: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides input[type = "radio"] {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    position: absolute;
+}
+
+.slide {
+    width: 600px;
+    height: 400px;
+    transition: 1s;
+}
+
+.manual-navigation {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    bottom: 10%;
+    left: 44%;
+}
+
+.manual-btn {
+    border: 1px solid aqua;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.manual-btn:hover {
+    background-color: aqua;
+}
+
+.auto-navigation {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    bottom: 22%;
+    margin-left: 264px;
+}
+
+.auto-navigation div {
+    border: 1px solid aqua;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+#radio1:checked ~ .auto-navigation .auto-btn1 {
+    background-color: aqua;
+}
+
+#radio2:checked ~ .auto-navigation .auto-btn2 {
+    background-color: aqua;
+}
+
+#radio3:checked ~ .auto-navigation .auto-btn3 {
+    background-color: aqua;
+}
+
+#radio4:checked ~ .auto-navigation .auto-btn4 {
+    background-color: aqua;
+}
